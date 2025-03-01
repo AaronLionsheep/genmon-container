@@ -2,7 +2,6 @@
 FROM python:3.8-slim
 
 # Configure the branch to checkout and publish (can be a tag or branch)
-# renovate: datasource=github-releases depName=jgyates/genmon
 ARG GENMON_VERSION="V1.19.00"
 
 # Label the container
