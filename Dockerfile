@@ -1,7 +1,11 @@
 # Use a specific tag for a stable and predictable base image.
 FROM python:3.8-slim
 
+# Configure the branch to checkout and publish (can be a tag or branch)
 ARG GENMON_VERSION="V1.19.00"
+
+# Label the container
+LABEL org.opencontainers.image.version="${GENMON_VERSION}"
 
 # Set non-interactive mode and define timezone to avoid unnecessary prompts during build.
 ENV DEBIAN_FRONTEND=noninteractive TZ="America/New_York"
