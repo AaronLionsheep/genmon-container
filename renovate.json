@@ -7,12 +7,12 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "/Dockerfile$"
+        "^Dockerfile$"
       ],
       "matchStrings": [
-        "ARG GENMON_VERSION=\"(?<currentValue>.+?)\""
+        "ARG GENMON_VERSION=\"(?<currentValue>.*?)\"\\n"
       ],
-      "datasourceTemplate": "github-releases",
+      "datasourceTemplate": "github-tags",
       "depNameTemplate": "jgyates/genmon"
     }
   ]
