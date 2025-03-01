@@ -16,5 +16,6 @@
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "loose"
     }
-  ]
+  ],
+  "separateMinorPatch": true
 }
