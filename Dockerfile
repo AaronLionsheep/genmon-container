@@ -1,7 +1,7 @@
 # Use a specific tag for a stable and predictable base image.
 FROM python:3.8-slim
 
-ARG GENMON_VERSION="1.19.00"
+ARG GENMON_VERSION="V1.19.00"
 
 # Set non-interactive mode and define timezone to avoid unnecessary prompts during build.
 ENV DEBIAN_FRONTEND=noninteractive TZ="America/New_York"
