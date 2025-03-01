@@ -59,7 +59,7 @@ jobs:
 
       - name: Extract genmon version
         id: genmon-version
-        run: grep -Eo 'GENMON_VERSION="\S+"' Dockerfile | sed 's/"//g' | sed 's/V//' >> "$GITHUB_OUTPUT"
+        run: grep -Eo 'GENMON_VERSION="\S+"' Dockerfile | sed 's/"//g' >> "$GITHUB_OUTPUT"
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
