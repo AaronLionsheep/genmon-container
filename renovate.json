@@ -7,7 +7,7 @@
     {
       "fileMatch": ["/Dockerfile$"],
       "matchStrings": [
-        "ARG GENMON_VERSION="(?<currentValue>.+?)"\\s+"
+        "ARG GENMON_VERSION=\"(?<currentValue>.+?)\"\\s+"
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "jgyates/genmon"
