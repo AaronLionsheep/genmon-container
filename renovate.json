@@ -17,5 +17,6 @@
       "versioningTemplate": "loose"
     }
   ],
-  "separateMinorPatch": true
+  "separateMinorPatch": true,
+  "separateMultipleMinor": true
 }
