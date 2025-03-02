@@ -30,6 +30,7 @@ ENV USE_SERIAL_TCP=true
 RUN git clone --depth 1 --branch ${GENMON_VERSION} http://github.com/jgyates/genmon.git && \
     chmod 775 /git/genmon/startgenmon.sh /git/genmon/genmonmaint.sh && \
     rm -rf /git/genmon/.git && \
+    mkdir -p /usr/lib/python3.11 && \
     touch /usr/lib/python3.11/EXTERNALLY-MANAGED
 
 # Initialize the application and configure it.
