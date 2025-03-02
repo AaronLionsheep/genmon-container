@@ -1,5 +1,6 @@
 # Use a specific tag for a stable and predictable base image.
-FROM python:3.11-slim
+ARG PYTHON_VERSION=3.11
+FROM python:${PYTHON_VERSION}-slim
 
 # Configure the branch to checkout and publish (can be a tag or branch)
 ARG GENMON_VERSION=V1.19.05
@@ -30,7 +31,7 @@ ENV USE_SERIAL_TCP=true
 RUN git clone --depth 1 --branch ${GENMON_VERSION} http://github.com/jgyates/genmon.git && \
     chmod 775 /git/genmon/startgenmon.sh /git/genmon/genmonmaint.sh && \
     rm -rf /git/genmon/.git && \
-    find /usr/lib -name EXTERNALLY-MANAGED -type f -delete
+    touch /usr/lib/python${PYTHON_VERSION}/EXTERNALLY-MANAGED
 
 # Initialize the application and configure it.
 RUN /git/genmon/genmonmaint.sh -i -n
