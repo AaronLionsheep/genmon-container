@@ -1,5 +1,5 @@
 # Use a specific tag for a stable and predictable base image.
-FROM python:3.8-slim
+FROM python:3.11-slim
 
 # Configure the branch to checkout and publish (can be a tag or branch)
 ARG GENMON_VERSION=V1.19.05
