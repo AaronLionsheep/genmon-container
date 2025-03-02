@@ -29,7 +29,8 @@ ENV USE_SERIAL_TCP=true
 # Clone the repository with shallow clone to minimize data pulled.
 RUN git clone --depth 1 --branch ${GENMON_VERSION} http://github.com/jgyates/genmon.git && \
     chmod 775 /git/genmon/startgenmon.sh /git/genmon/genmonmaint.sh && \
-    rm -rf /git/genmon/.git
+    rm -rf /git/genmon/.git && \
+    rm /usr/lib/python3.*/EXTERNALLY-MANAGED
 
 # Initialize the application and configure it.
 RUN /git/genmon/genmonmaint.sh -i -n
