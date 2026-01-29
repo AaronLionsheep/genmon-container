@@ -2,7 +2,7 @@
 FROM python:3.13-slim
 
 # Configure the branch to checkout and publish (can be a tag or branch)
-ARG GENMON_VERSION=V1.19.07
+ARG GENMON_VERSION=V1.19.08
 
 # Label the container
 LABEL org.opencontainers.image.version="${GENMON_VERSION}"
